@@ -10,11 +10,12 @@ class Tablero {
     dibujarCasilla = (x, y, color) => {
         this.ctx.fillStyle = color;
         this.ctx.fillRect(x * this.TC, y * this.TC, this.TC, this.TC);
+        
         this.ctx.strokeStyle = "BLACK";
         this.ctx.strokeRect(x * this.TC, y * this.TC, this.TC, this.TC);
     }
 
-    // dibujar en el canvas según los colores del tablaro
+    // dibujar en el canvas según los colores del tablero
     dibujarTablero = () => {};
 
     get filas() {}

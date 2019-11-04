@@ -12,7 +12,7 @@ class Juego {
 
     // devuelve una pieza aleatoria
     piezaAleatoria = () => {
-
+        
     }
 
     get tablero() {
