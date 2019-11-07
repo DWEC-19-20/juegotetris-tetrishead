@@ -1,34 +1,49 @@
 class Tablero {
     constructor(filas, columnas, tamañoCuadrado, ctx) {
-         // inicializa el tablero todos los elementos de color WHITE		
+         // inicializa el tablero todos los elementos de color WHITE
+         this._f = filas;
+         this._c = columnas;
     }
 
     // Es vacio si tiene el color WHITE
-    esVacio = (x, y) => {}
+    esVacio = (x, y) => {
+
+    }
 
     // Dibuja un en el canvas del color recibido
     dibujarCasilla = (x, y, color) => {
         this.ctx.fillStyle = color;
-        this.ctx.fillRect(x * this.TC, y * this.TC, this.TC, this.TC);
+        this.ctx.fillRect(x * this.SQ, y * this.SQ, this.SQ, this.SQ);
         
         this.ctx.strokeStyle = "BLACK";
-        this.ctx.strokeRect(x * this.TC, y * this.TC, this.TC, this.TC);
+        this.ctx.strokeRect(x * this.SQ, y * this.SQ, this.SQ, this.SQ);
     }
 
     // dibujar en el canvas según los colores del tablero
-    dibujarTablero = () => {};
+    dibujarTablero = () => {
+       for (let r = 0; r < this._f; r++) {
+           for (let c = 0; c < this._c; c++) {
+               dibujarCasilla(c, r, "red");
+           }
+       }
+    };
 
-    get filas() {}
+    get filas() {
+    }
 
-    set filas(fila) {}
+    set filas(fila) {
+    }
 
-    get columnas() {}
+    get columnas() {
 
-    set columnas(columna) {}
+    }
+
+    set columnas(columna) {
+    }
 
     //Devuelve el color del tablero en la casilla indicada
     getCasilla = (f, c) => {
-
+        
     }
 
     //Cambiar el color del tablero en la casilla indicada

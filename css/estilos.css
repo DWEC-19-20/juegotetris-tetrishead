@@ -1,8 +1,6 @@
 canvas{
 	display: block;
 	margin:0 auto;
-	background-color: rgb(224, 224, 224);
-	border: 1px solid black;
 }
 
 .puntuacion {

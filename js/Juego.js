@@ -12,7 +12,6 @@ class Juego {
 
     // devuelve una pieza aleatoria
     piezaAleatoria = () => {
-        
     }
 
     get tablero() {
@@ -30,9 +29,11 @@ class Juego {
     get comenzarCaer() {
         return this._comenzarCaer;
     }
+
     set comenzarCaer(comenzarCaer) {
         this._comenzarCaer = comenzarCaer;
     }
+
     caer = () => {
         let ahora = Date.now();
         let delta = ahora - this.comenzarCaer;
