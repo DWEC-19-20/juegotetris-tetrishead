@@ -64,6 +64,14 @@ class Pieza {
         juego.piezaAleatoria();
         console.log("bajando ficha");
         this.y++;
+        /*if(!this.colision(0,1,this.activeTetromino)){
+            this.borrar();
+            this.y++;
+            this.dibujar();
+        }else{
+            this.fijar();
+            pieza = piezaAleatoria();
+        }*/
 
     }
 
