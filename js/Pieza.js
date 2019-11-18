@@ -8,20 +8,17 @@ const PIEZAS = [
     [I, "red"],
     [J, "yellow"]
 ];
-
-
-
 // La clase pieza
 class Pieza {
 
     constructor(tetromino, color, tablero) {
-        this.tetromino=tetromino;//Letra de la pieza
-        this.color=color;
-        this.tablero=tablero;//Referencia al tablero para dibujar
-        this.tetrominoN = 0;//Empezamos con la primera forma
-        this.activeTetromino = this.tetromino[this.tetrominoN];//Array según la letra de la primera forma
-        this.x = 3
-        this.y -2;
+        this.tetromino = tetromino; //Letra de la pieza
+        this.color = color;
+        this.tablero = tablero; //Referencia al tablero para dibujar
+        this.tetrominoN = 0; //Empezamos con la primera forma
+        this.activeTetromino = this.tetromino[this.tetrominoN]; //Array según la letra de la primera forma
+        this.x = 4;
+        this.y = -1;
         // propiedades numeroForma, tetrominioActual, posición x e y en el canvas  	
     }
 
@@ -31,12 +28,30 @@ class Pieza {
 
 
     // rellena el tetromino de la pieza con su color en el canvas
-    rellenar = (color) => {}
+    rellenar = (color) => {
+        for (let f = 0; f < this.activeTetromino.length; f++) {
+
+            for (let c = 0; c < this.activeTetromino.length; c++) {
+
+                if (this.activeTetromino[f][c]) {
+                    dibujarCasilla(this.x + c, this.y + f, color);
+                }
+            }
+        }
+    }
 
     // dibuja el color de una pieza
     dibujar = () => {
-        
 
+        for (let f = 0; f < this.activeTetromino.length; f++) {
+
+            for (let c = 0; c < this.activeTetromino.length; c++) {
+
+                if (this.activeTetromino[f][c]) {
+                    dibujarCasilla(this.x + c, this.y + f, this.color);
+                }
+            }
+        }
     }
 
     // borra una pieza rellenandola de casillas blancas
@@ -44,8 +59,8 @@ class Pieza {
 
     // mover abajo la pieza, si queda fijada, deberá obtener una nueva
     moverAbajo = () => {
-     
-        juego.tablero.dibujarCasilla(this.x,this.y+1,"blue");
+
+        juego.tablero.dibujarCasilla(this.x, this.y + 1, "blue");
         juego.piezaAleatoria();
         console.log("bajando ficha");
         this.y++;

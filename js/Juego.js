@@ -13,8 +13,8 @@ class Juego {
 
     // devuelve una pieza aleatoria
     piezaAleatoria = () => {
-
-        return new Pieza(PIEZAS[0][0],PIEZAS[0][1],this._tablero);
+        //let randomN = Math.floor(Math.random() * this._pieza.length);
+        return new Pieza(PIEZAS[0][0], PIEZAS[0][1], this._tablero);
     }
 
     get tablero() {
@@ -41,7 +41,7 @@ class Juego {
         if (delta > 1000) {
             this.pieza.moverAbajo();
             this.comenzarCaer = Date.now();
-         
+
         }
         if (!this.gameOver) {
             requestAnimationFrame(this.caer);
