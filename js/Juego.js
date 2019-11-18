@@ -8,10 +8,13 @@ class Juego {
         this._comenzarCaer = Date.now();
         this.score = 0;
 
+
     }
 
     // devuelve una pieza aleatoria
     piezaAleatoria = () => {
+
+        return new Pieza(PIEZAS[0][0],PIEZAS[0][1],this._tablero);
     }
 
     get tablero() {
@@ -29,17 +32,16 @@ class Juego {
     get comenzarCaer() {
         return this._comenzarCaer;
     }
-
     set comenzarCaer(comenzarCaer) {
         this._comenzarCaer = comenzarCaer;
     }
-
     caer = () => {
         let ahora = Date.now();
         let delta = ahora - this.comenzarCaer;
         if (delta > 1000) {
             this.pieza.moverAbajo();
             this.comenzarCaer = Date.now();
+         
         }
         if (!this.gameOver) {
             requestAnimationFrame(this.caer);

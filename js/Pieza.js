@@ -9,15 +9,20 @@ const PIEZAS = [
     [J, "yellow"]
 ];
 
+
+
 // La clase pieza
 class Pieza {
 
     constructor(tetromino, color, tablero) {
+        this.tetromino=tetromino;//Letra de la pieza
+        this.color=color;
+        this.tablero=tablero;//Referencia al tablero para dibujar
+        this.tetrominoN = 0;//Empezamos con la primera forma
+        this.activeTetromino = this.tetromino[this.tetrominoN];//Array según la letra de la primera forma
+        this.x = 3
+        this.y -2;
         // propiedades numeroForma, tetrominioActual, posición x e y en el canvas  	
-        this.color = color;
-        this.x = x;
-        this.y = y;
-        dibujarCasilla(this.x, this.y, this.color);
     }
 
     // rota la piezaentre las distintas formas del tetrominio
@@ -26,43 +31,47 @@ class Pieza {
 
 
     // rellena el tetromino de la pieza con su color en el canvas
-    rellenar = (color) => {
-        dibujarCasilla(this.x, this.y, color);
-    }
+    rellenar = (color) => {}
 
     // dibuja el color de una pieza
     dibujar = () => {
-        this.rellenar(this.color);
+        
+
     }
 
     // borra una pieza rellenandola de casillas blancas
-    borrar = () => {
-        this.rellenar("WHITE");
-    }
+    borrar = () => {}
 
     // mover abajo la pieza, si queda fijada, deberá obtener una nueva
     moverAbajo = () => {
-            this.borrar();
-            this.y++;
-            if (this.y >= ROW) {
-                this.y = 0;
-                this.x = Math.floor((Math.random() * COL));
-                this.color = COLORES[Math.floor(Math.random() * COLORES.length)];
-            }
+     
+        juego.tablero.dibujarCasilla(this.x,this.y+1,"blue");
+        juego.piezaAleatoria();
+        console.log("bajando ficha");
+        this.y++;
+
     }
 
     // mover derecha la pieza hasta chocar con la pared 
-    moverDerecha = () => {}
+    moverDerecha = () => {
+        console.log("mover ficha derecha");
+        this.x++;
+    }
 
     // mover izquierda la pieza hasta chocar con la pared 
-    moverIzquierda = () => {}
+    moverIzquierda = () => {
+        console.log("moviendo ficha izquierda");
+        this.x--;
+    }
 
     // fijar pieza cuando choca con el suelo u otra pieza
     // hay que comprobar si se ha formado una o varias lineas para borrarlas 
     fijar = () => {}
 
     // Comprueba si se produce una colisión de una pieza con el suelo u otra pieza 
-    colision = (x, y, pieza) => {}
+    colision = (x, y, pieza) => {
+
+    }
 
 
 
