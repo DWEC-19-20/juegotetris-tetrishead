@@ -18,13 +18,20 @@ class Pieza {
         this.tetrominoN = 0; //Empezamos con la primera forma
         this.activeTetromino = this.tetromino[this.tetrominoN]; //Array según la letra de la primera forma
         this.x = 3;
-        this.y = -2;
+        this.y = -1;
         // propiedades numeroForma, tetrominioActual, posición x e y en el canvas  	
     }
 
     // rota la piezaentre las distintas formas del tetrominio
     // de debe controlar que si está muy cerca de las paredes algunas no pueden girar
-    rotar = () => {}
+    rotar = () => {
+
+        this.borrar();
+        this.activeTetromino=this.tetromino[this.tetrominoN];
+        this.tetrominoN=(this.tetrominoN+1)%this.tetromino.length;
+        this.activeTetromino=this.tetromino[this.tetrominoN];
+        this.dibujar();
+    }
 
 
     // rellena el tetromino de la pieza con su color en el canvas
@@ -62,16 +69,16 @@ class Pieza {
 
     // mover abajo la pieza, si queda fijada, deberá obtener una nueva
     moverAbajo = () => {
-
+        console.log(`mover abajo ${this.y}` );
+        if(!this.colision(this.x,this.y,this.activeTetromino)){
         this.borrar();
         this.y++;
         this.dibujar();
-
-        if(this.y>=juego.tablero.filas){
-            this.y=0;
-            this.x=Math.floor((Math.random()*juego.tablero.columnas));
-            this.color=PIEZAS[Math.floor((Math.random()*PIEZAS.length))];
         }
+        else {
+            this.fijar();
+        }
+        
     }
 
     // mover derecha la pieza hasta chocar con la pared 
@@ -92,11 +99,22 @@ class Pieza {
 
     // fijar pieza cuando choca con el suelo u otra pieza
     // hay que comprobar si se ha formado una o varias lineas para borrarlas 
-    fijar = () => {}
+    fijar = () => {
+
+        
+        juego.pieza = juego.piezaAleatoria();
+    }
 
     // Comprueba si se produce una colisión de una pieza con el suelo u otra pieza 
     colision = (x, y, pieza) => {
-
+        
+        if(pieza.length+y > 20){
+            console.log(`atraviesa la fila $(20-y)`);
+            console.log(pieza[20-y]);
+            if(pieza[20-y].reduce((x,y)=>x+y)>0);
+                return true;
+        }
+        return false;
     }
 
 }
