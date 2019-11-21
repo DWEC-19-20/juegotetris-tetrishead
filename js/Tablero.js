@@ -4,7 +4,6 @@ class Tablero {
         this.columnas = columnas;
         this.TC = tamañoCuadrado;
         this.ctx = ctx;
-        const VACANT = "WHITE"; //Inicializa el tablero todos los elementos de color white		
     }
 
     // Es vacio si tiene el color WHITE

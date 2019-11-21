@@ -17,8 +17,8 @@ class Pieza {
         this.tablero = tablero; //Referencia al tablero para dibujar
         this.tetrominoN = 0; //Empezamos con la primera forma
         this.activeTetromino = this.tetromino[this.tetrominoN]; //Array según la letra de la primera forma
-        this.x = 4;
-        this.y = -1;
+        this.x = 3;
+        this.y = -2;
         // propiedades numeroForma, tetrominioActual, posición x e y en el canvas  	
     }
 
@@ -29,15 +29,7 @@ class Pieza {
 
     // rellena el tetromino de la pieza con su color en el canvas
     rellenar = (color) => {
-        for (let f = 0; f < this.activeTetromino.length; f++) {
-
-            for (let c = 0; c < this.activeTetromino.length; c++) {
-
-                if (this.activeTetromino[f][c]) {
-                    dibujarCasilla(this.x + c, this.y + f, color);
-                }
-            }
-        }
+        juego.tablero.dibujarCasilla(this.x,this.y,color);
     }
 
     // dibuja el color de una pieza
@@ -48,43 +40,54 @@ class Pieza {
             for (let c = 0; c < this.activeTetromino.length; c++) {
 
                 if (this.activeTetromino[f][c]) {
-                    dibujarCasilla(this.x + c, this.y + f, this.color);
+                    juego.tablero.dibujarCasilla(this.x + c, this.y + f, this.color);
                 }
             }
         }
     }
 
     // borra una pieza rellenandola de casillas blancas
-    borrar = () => {}
+    borrar = () => {
+
+        for (let f = 0; f < this.activeTetromino.length; f++) {
+
+            for (let c = 0; c < this.activeTetromino.length; c++) {
+
+                if (this.activeTetromino[f][c]) {
+                    juego.tablero.dibujarCasilla(this.x + c, this.y + f, "white");
+                }
+            }
+        }
+    }
 
     // mover abajo la pieza, si queda fijada, deberá obtener una nueva
     moverAbajo = () => {
 
-        juego.tablero.dibujarCasilla(this.x, this.y + 1, "blue");
-        juego.piezaAleatoria();
-        console.log("bajando ficha");
+        this.borrar();
         this.y++;
-        /*if(!this.colision(0,1,this.activeTetromino)){
-            this.borrar();
-            this.y++;
-            this.dibujar();
-        }else{
-            this.fijar();
-            pieza = piezaAleatoria();
-        }*/
+        this.dibujar();
 
+        if(this.y>=juego.tablero.filas){
+            this.y=0;
+            this.x=Math.floor((Math.random()*juego.tablero.columnas));
+            this.color=PIEZAS[Math.floor((Math.random()*PIEZAS.length))];
+        }
     }
 
     // mover derecha la pieza hasta chocar con la pared 
     moverDerecha = () => {
         console.log("mover ficha derecha");
+        this.borrar();
         this.x++;
+        this.dibujar();
     }
 
     // mover izquierda la pieza hasta chocar con la pared 
     moverIzquierda = () => {
         console.log("moviendo ficha izquierda");
+        this.borrar();
         this.x--;
+        this.dibujar();
     }
 
     // fijar pieza cuando choca con el suelo u otra pieza
@@ -95,7 +98,5 @@ class Pieza {
     colision = (x, y, pieza) => {
 
     }
-
-
 
 }
