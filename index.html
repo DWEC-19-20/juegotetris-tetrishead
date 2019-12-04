@@ -6,10 +6,17 @@
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
-    <center><i style="font-size:30px;text-decoration:underline;font-weight:bold;">TETRIS</i></center>
+    <center><h1>TETRIS</h1></center>
+    <div class="center">
+        <button id="start">Start</button>
+    </div>
     <canvas id="tetris" width="200" height="400"></canvas>
     <div class="puntuacion" >
-        <br><br><b style="background-color: aqua;">Puntuación:</b> <div id="score"><b>0</b></div>
+        <br><br><b>Puntuación:</b> <div id="score"><b>0</b></div>
+    </div>
+    <div class="center">
+        <br>
+        <button id="dificultad">Dificultad</button>
     </div>
     <script src="js/tetrominos.js"></script>
     <script src="js/Juego.js"></script>

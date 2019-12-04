@@ -1,12 +1,12 @@
 // las piezas y sus colores
 const PIEZAS = [
-    [Z, "orange"],
-    [S, "cyan"],
-    [T, "green"],
-    [O, "grey"],
-    [L, "purple"],
-    [I, "red"],
-    [J, "yellow"]
+    [Z, "rgb(233, 149, 24)"],
+    [S, "rgb(24, 97, 233)"],
+    [T, "rgb(38, 192, 46)"],
+    [O, "rgb(94, 94, 94)"],
+    [L, "rgb(96, 45, 145)"],
+    [I, "rgb(175, 33, 33)"],
+    [J, "rgb(197, 194, 35)"]
 ];
 
 // La clase pieza

@@ -7,7 +7,7 @@ class Juego {
         this.gameOver = false;
         this._comenzarCaer = Date.now();
         this.score = 0;
-
+        this._velocidad= 1000;
     }
 
     // devuelve una pieza aleatoria
@@ -35,10 +35,11 @@ class Juego {
     set comenzarCaer(comenzarCaer) {
         this._comenzarCaer = comenzarCaer;
     }
+    
     caer = () => {
         let ahora = Date.now();
         let delta = ahora - this.comenzarCaer;
-        if (delta > 1000) {
+        if (delta > this._velocidad) {
             this.pieza.moverAbajo();
             this.comenzarCaer = Date.now();
         }
