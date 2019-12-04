@@ -6,13 +6,15 @@ class Juego {
         this._pieza = this.piezaAleatoria();
         this.gameOver = false;
         this._comenzarCaer = Date.now();
-        this.score = 0;
+        this.score = document.getElementById("score");
 
     }
 
     // devuelve una pieza aleatoria
     piezaAleatoria = () => {
+        var randomN = Math.floor(Math.random() * PIEZAS.length);
         
+        return new Pieza(PIEZAS[randomN][0],PIEZAS[randomN][1],this.tablero); 
     }
 
     get tablero() {
@@ -48,13 +50,16 @@ class Juego {
     control = (event) => {
         if (event.keyCode == 37) {
             this.pieza.moverIzquierda();
-            this.comenzarCaer = Date.now();
+            this.caer();
+            //this.comenzarCaer = Date.now();
         } else if (event.keyCode == 38) {
             this.pieza.rotar();
-            this.comenzarCaer = Date.now();
+            this.caer();
+            //this.comenzarCaer = Date.now();
         } else if (event.keyCode == 39) {
             this.pieza.moverDerecha();
-            this.comenzarCaer = Date.now();
+            this.caer();
+            //this.comenzarCaer = Date.now();
         } else if (event.keyCode == 40) {
             this.pieza.moverAbajo();
         }
