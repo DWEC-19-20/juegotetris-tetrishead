@@ -8,13 +8,19 @@ class Juego {
         this._comenzarCaer = Date.now();
         this.score = document.getElementById("score");
 
+
     }
 
     // devuelve una pieza aleatoria
     piezaAleatoria = () => {
+<<<<<<< HEAD
         var randomN = Math.floor(Math.random() * PIEZAS.length);
         
         return new Pieza(PIEZAS[randomN][0],PIEZAS[randomN][1],this.tablero); 
+=======
+        let randomN = Math.floor(Math.random() * PIEZAS.length);
+        return new Pieza(PIEZAS[randomN][0], PIEZAS[randomN][1], this._tablero);
+>>>>>>> c4c743fd2be813657afa6a8403a8dec8ed1a281d
     }
 
     get tablero() {
@@ -41,6 +47,7 @@ class Juego {
         if (delta > 1000) {
             this.pieza.moverAbajo();
             this.comenzarCaer = Date.now();
+
         }
         if (!this.gameOver) {
             requestAnimationFrame(this.caer);
