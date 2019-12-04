@@ -32,6 +32,7 @@ document.getElementById("start").addEventListener('click', function () {
     document.getElementById("start").style.backgroundColor = "rgb(172, 16, 16)";
     document.getElementById("start").style.color = "white";
     juego.caer();
+    document.getElementById("demo").play();
 });
 
 

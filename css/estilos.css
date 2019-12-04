@@ -19,6 +19,25 @@ h1 {
 	color: rgb(49, 49, 49);
 }
 
+#pause {
+	height: 3em;
+	width: 3em;
+	border-radius: 50%;
+}
+
+#pause:hover {
+	background-color: rgb(172, 16, 16);
+	color: white;
+}
+
+#play {
+	width: 74px;
+  height: 74px;
+  border-style: solid;
+  border-width: 37px;
+  border-color: #202020;
+}
+
 .center {
 	text-align: center;
 }
