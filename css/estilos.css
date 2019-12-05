@@ -1,22 +1,68 @@
+html {
+	background: linear-gradient(270deg, #ac41ed, #5a9ce3, #1bb5d4);
+background-size: 600% 600%;
+
+-webkit-animation: AnimationName 30s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
+
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 body {
 	font-family: 'Open Sans',
 	sans-serif;
 }
 
+dialog {
+	margin-top: 5em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+	0 1px 2px rgba(0, 0, 0, 0.24);
+	background-color: rgb(160, 7, 7);
+	border: 0;
+	color: white;
+	font-weight: bold;
+	transition: 1s;
+	width: 15em;
+	text-align: center;
+}
+
 canvas{
-	display: block;
 	margin: auto;
     margin-top: 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-    0 1px 2px rgba(0, 0, 0, 0.24);
+	0 1px 2px rgba(0, 0, 0, 0.24);
+	background-color: white;
 }
 
 .puntuacion {
 	text-align: center;
+	color: white;
 }
 
+.canv {
+	text-align: center;
+	margin-left: 6.5em;
+}
+
+
 h1 {
-	color: rgb(49, 49, 49);
+	color: white;
 }
 
 #pause {
@@ -26,7 +72,7 @@ h1 {
 }
 
 #pause:hover {
-	background-color: rgb(172, 16, 16);
+	background-color: rgb(179, 58, 58);
 	color: white;
 }
 
@@ -56,6 +102,6 @@ button {
 }
 
 #start:hover {
-	background-color: rgb(172, 16, 16);
+	background-color: rgb(175, 45, 45);
 	color: white;
 }

@@ -1,5 +1,6 @@
-const cvs = document.getElementById("tetris");
+var cvs = document.getElementById("tetris");
 var juego = new Juego(cvs);
+
 let bol = 0;
 var dificultad = document.getElementById("dificultad");
 dificultad.addEventListener('click', function () {
@@ -28,13 +29,16 @@ document.addEventListener("keydown", juego.control);
 juego.tablero.dibujarCasilla(0, 0, "white");
 juego.tablero.dibujarTablero();
 
+let bol1 = 0;
 document.getElementById("start").addEventListener('click', function () {
+    if (bol1 == 1)
+        location.reload();
     document.getElementById("start").style.backgroundColor = "rgb(172, 16, 16)";
     document.getElementById("start").style.color = "white";
     juego.caer();
     document.getElementById("demo").play();
+    bol1 = 1;
 });
-
 
 
 

@@ -56,10 +56,6 @@ class Pieza {
       }
     }
 
-
-    
-
-
     // rellena el tetromino de la pieza con su color en el canvas
     rellenar = (color) => {
         for(var f=0; f<this.activeTetromino.length; f++){
@@ -116,6 +112,11 @@ class Pieza {
         }
     }
 
+    previsualizar = () => {
+        juego.pieza = juego.piezaAleatoria();
+        
+    }
+
     // fijar pieza cuando choca con el suelo u otra pieza
     // hay que comprobar si se ha formado una o varias lineas para borrarlas 
     fijar = () => {
@@ -126,8 +127,8 @@ class Pieza {
                     continue;
                 }
                 if(this.y+f<0){
-                    alert("Game Over");
                     juego.gameOver=true;
+                    document.getElementById("dialog").style.opacity = "1";
                     break;
                 }
                 this.tablero._tablero[this.y+f][this.x+c]=this.color;

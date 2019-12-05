@@ -102,5 +102,4 @@ class Tablero {
         document.getElementById("score").innerHTML = juego.score;
         this.dibujarTablero();
     }
-
 }
