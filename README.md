@@ -68,7 +68,7 @@ creación de más piezas.
   
 ## Autores ✒️
 
-Aquellos que ayudaron a levantar el proyecto desde sus inicios_
+Aquellos que ayudaron a levantar el proyecto desde sus inicios
 
 * **David Balboa** - *CSS* - *JS* - [itsnotLonee](https://github.com/itsnotLonee)
 * **Javier Berrocal** - *Documentación* - *JS* - [javiCE98](https://github.com/javiCE98)
