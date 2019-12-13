@@ -53,7 +53,7 @@ creación de más piezas.
 
 	**- pieza.js:**
 
-**- tetrominos.js:** Contiene los arrays multidimensionales que forman las piezas.
+	**- tetrominos.js:** Contiene los arrays multidimensionales que forman las piezas.
 
   * index.html: Contiene el codigo html con el que se ejecuta el juego.
 
