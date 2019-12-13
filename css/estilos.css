@@ -6,6 +6,8 @@ background-size: 600% 600%;
 -moz-animation: AnimationName 30s ease infinite;
 animation: AnimationName 30s ease infinite;
 
+overflow: hidden;
+
 }
 
 @-webkit-keyframes AnimationName {
