@@ -1,3 +1,8 @@
+@font-face {
+	font-family: TetrisBlocks;
+	src: url("../font/TetrisBlocks.otf");
+  }
+
 html {
 	background: linear-gradient(270deg, #ac41ed, #5a9ce3, #1bb5d4);
 background-size: 600% 600%;
@@ -29,6 +34,15 @@ overflow: hidden;
 body {
 	font-family: 'Open Sans',
 	sans-serif;
+}
+
+
+.titulo{
+	margin-bottom: 0;
+	font-family: "TetrisBlocks";
+	text-align: center;
+	font-size: 10vmin;
+
 }
 
 dialog {
