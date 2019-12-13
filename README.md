@@ -47,22 +47,22 @@ creación de más piezas.
 		
   * js: Contiene los ficheros:
   
-  	**- script.js:**
-	
-	**- juego.js:**
+  	**- script.js:** Inicializa el juego y controla los botones de la vista.
+      
+  	**- juego.js:** Controla la salida de las piezas, crea la siguiente pieza de manera aleatoria, y la entrada por teclado.
 
-	**- tablero.js:** Contiene las funciones necesarias para crear el tablero, dibujar en el canvas, comprobar si esta vacia la 		posicion donde se fija la pieza, y la funcion necesaria para eliminar filas completas y sumar puntuacion.
-
-	**- pieza.js:**
-
-	**- tetrominos.js:** Contiene los arrays multidimensionales que forman las piezas.
+  	**- tablero.js:** Contiene las funciones necesarias para crear el tablero, dibujar en el canvas, comprobar si esta vacia la 				posicion, y la funcion necesaria para eliminar filas completas y sumar puntuacion.
+          
+  	**- pieza.js:** Calcula y controla el desplazamiento, rotacion y fijacion de la pieza actual.
+      
+  	**- tetrominos.js:** Contiene los arrays multidimensionales que forman las piezas.
 
   * index.html: Contiene el codigo html con el que se ejecuta el juego.
 
 ## Reparar ⚠️🔧
 
 - ❗️ Mostrar en un segundo canvas la siguiente pieza.
-- ❗️ Hacerlo responsive.
+- ✔️ Hacerlo responsive para quitar el scroll
 - ❗️ Aumentar la velocidad a medida que aumenta la puntuacion.
 - ❗️ Visualizar animacion de combos.
 - ❗️ Mantener puntuacion maxima.
