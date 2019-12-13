@@ -27,9 +27,9 @@ creación de más piezas.
     - Descender mas rapido:   curso "abajo" ⬇️
       
 ### Botones:
-    ![New Game](https://raw.githubusercontent.com/DWEC-19-20/juegotetris-tetrishead/master/img/newGame.PNG) Boton para comenzar una nueva partida.
-    ![Dificultad](https://raw.githubusercontent.com/DWEC-19-20/juegotetris-tetrishead/master/img/level.PNG) Aumenta la velocidad de caida de las piezas (4 niveles disponibles).
-    ![Mute](https://github.com/DWEC-19-20/juegotetris-tetrishead/blob/master/img/mute.PNG) Silencia la musica.
+    ![New Game](https://raw.githubusercontent.com/DWEC-19-20/juegotetris-tetrishead/master/img/newGame.PNG?raw=true) Boton para comenzar una nueva partida.
+    ![Dificultad](https://raw.githubusercontent.com/DWEC-19-20/juegotetris-tetrishead/master/img/level.PNG?raw=true) Aumenta la velocidad de caida de las piezas (4 niveles disponibles).
+    ![Mute](https://github.com/DWEC-19-20/juegotetris-tetrishead/blob/master/img/mute.PNG?raw=true) Silencia la musica.
 
 ## Construido con 🛠️
   - HTML5 
