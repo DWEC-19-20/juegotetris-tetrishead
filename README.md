@@ -76,3 +76,14 @@ Aquellos que ayudaron a levantar el proyecto desde sus inicios
 * **Javier Berrocal** - *Documentación* - *JS* - [javiCE98](https://github.com/javiCE98)
 * **Isaac Taveras** - *Documentación* - *JS* - [isaacdaw2](https://github.com/isaacdaw2)
 * **Carlos Asenjo** - *Documentación* - *JS* - [javiCE98](https://github.com/CarlosAsenjo)
+
+División de tareas de la práctica
+
+David: Se ha encargado de la realización de crear el canvas de la pieza aleatoria,de poner los botones de dificultad , del botón del sonido del juego y del botón de nuevo juego.Además de la parte del CSS,los estilos,de la parte del script y de la función colisión() de la clase Pieza.
+
+Carlos:Se ha encargado de las funciones rellenar(),dibujar(),borrar(),moverAbajo(),moverIzquierda() y moverDerecha() de la clase Pieza.
+
+Isaac:Se ha encargado de las funciones piezaAleatoria(),caer(),control(event) de la clase Juego,de la función fijar() de la clase Pieza y de la función rotar() de la clase Pieza.
+
+
+Javier:Se ha encargado de las funciones esVacio(),dibujarCasilla(),dibujarTablero(),crearTablero() y eliminarFilasCompletas() de la clase Tablero.
