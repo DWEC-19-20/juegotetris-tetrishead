@@ -77,13 +77,80 @@ Aquellos que ayudaron a levantar el proyecto desde sus inicios
 * **Isaac Taveras** - *Documentación* - *JS* - [isaacdaw2](https://github.com/isaacdaw2)
 * **Carlos Asenjo** - *Documentación* - *JS* - [javiCE98](https://github.com/CarlosAsenjo)
 
+
+
 División de tareas de la práctica
-
-David: Se ha encargado de la realización de crear el canvas de la pieza aleatoria,de poner los botones de dificultad , del botón del sonido del juego y del botón de nuevo juego.Además de la parte del CSS,los estilos,de la parte del script y de la función colisión() de la clase Pieza.
-
-Carlos:Se ha encargado de las funciones rellenar(),dibujar(),borrar(),moverAbajo(),moverIzquierda() y moverDerecha() de la clase Pieza.
-
-Isaac:Se ha encargado de las funciones piezaAleatoria(),caer(),control(event) de la clase Juego,de la función fijar() de la clase Pieza y de la función rotar() de la clase Pieza.
+//Entre todos los integrantes hemos ido modificando cosas y cuando hemos conseguido la solución de cada parte la hemos ido integrando.
 
 
-Javier:Se ha encargado de las funciones esVacio(),dibujarCasilla(),dibujarTablero(),crearTablero() y eliminarFilasCompletas() de la clase Tablero.
+1.Cómo usuario querría poder mover las piezas del Tetris pulsando flecha izquierda o derecha para que pueda elegir donde situar la pieza.
+
+Carlos Asenjo
+
+2.Cómo usuario querría poder mover las piezas del Tetris rápidamente pulsando flecha abajo una vez elegida donde situar la pieza para que pueda ganar tiempo.
+
+Carlos Asenjo
+
+3.Cómo usuario querría poder girar las piezas del Tetris pulsando flecha arriba para que encaje mejor.
+
+Carlos Asenjo
+
+4.Cómo usuario querría visualizar mi puntuación y/o lineas desbloqueadas para que sepa si voy a superar un record
+
+David Balboa
+
+5.Cómo usuario querría visualizar la/s siguiente/s pieza/s para que pueda planear donde ponerla
+
+David Balboa
+
+6.Cómo usuario querría visualizar el record más alto para que intente superarlo
+
+Sin realizar
+
+7.Cómo usuario querría aumentar la dificultad aumentando la dificultad para que suponga un reto mayor obtener un record
+
+David Balboa
+
+8.Cómo programador analista querría utilizar un canvas HTML5 para que se visualice el array del juego de 10 x 20
+
+Javier Berrocal
+
+9.Cómo programador analista querría tener definidas las clases Juego, Pieza, Tablero para utilizar las ventajas de la programación orientada a objetos
+
+Javier Berrocal
+
+10.Cómo programador analista querría tener en la clase Pieza tenga las propiedades tetromino, color, tetrominioActual, númeroTetrominio, posiciónX, posiciónY, posición además de redibir una instancia del tablero para poder utilizarlo en el juego.
+
+Javier Berrocal
+
+11.Cómo programador analista querría tener en la clase Pieza los métodos moverIzquierda, moverDerecha, rotar y moverAbajo para que se mueva la pieza activa.
+
+Isaac Taveras
+
+12.Cómo programador analista querría que el método rotar de la clase Pieza controle si está en el borde del tablero para poder girar la pieza solo si tiene espacio.
+
+Isaac Taveras
+
+13.Cómo programador analista querría tener en la clase Pieza el método fijar cuando la pieza activa toque una pieza ocupada del tablero para que se pueda eliminar filas y obtener la siguiente pieza.
+
+Isaac Taveras
+
+14.Cómo programador analista querría que el cuando se fije una pieza se llame a la función comprobarFilas de la clase Tablero, para que elimine las filas completadas.
+
+Isaac Taveras
+
+15.Cómo programador analista querría que el cuando se fije una pieza se llama a la función termine el juego si la pieza ocupa una posición más alta al tablero, para que el juego termine.
+
+Javier Berrocal
+
+16.Cómo programador analista querría modificar la función caer para que después de un número de lineas completadas, aumente el nivel, para que caiga la pieza con más velocidad.
+
+Carlos Asenjo
+
+17.Cómo programador analista querría tener una función piezaAleatoria en la clase Juego para que obtenga la pieza aleatoria en el juego y la siguiente a jugar.
+
+David Balboa
+
+18.Cómo programador analista querría tener test unitarios de las funciones esVacio, eliminarFilasCompletas, colision, fijar para que este seguro del correcto funcionamiento del juego.
+
+Sin realizar
