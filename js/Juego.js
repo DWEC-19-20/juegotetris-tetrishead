@@ -1,11 +1,17 @@
 class Juego {
 
-    constructor(cvs) {
+    constructor(cvs, cvsNext) {
         this.ctx = cvs.getContext("2d");
         this._tablero = new Tablero(20, 10, 20, this.ctx);
+        this.ctxNext = cvsNext.getContext("2d");
+        this.miniTablero = new Tablero(5, 5, 20, this.ctxNext);
+        this._pSig = this.piezaAleatoria();
         this._pieza = this.piezaAleatoria();
         this.gameOver = false;
         this._comenzarCaer = Date.now();
+        this._pSig.tablero = this.miniTablero;
+        this._pSig.x = 1;
+        this._pSig.y = 1;
         this.score = 0;
         this._velocidad= 1000;
     }
@@ -49,20 +55,22 @@ class Juego {
     }
 
     control = (event) => {
-        if (event.keyCode == 37) {
-            this.pieza.moverIzquierda();
-            this.caer();
-            //this.comenzarCaer = Date.now();
-        } else if (event.keyCode == 38) {
-            this.pieza.rotar();
-            this.caer();
-            //this.comenzarCaer = Date.now();
-        } else if (event.keyCode == 39) {
-            this.pieza.moverDerecha();
-            this.caer();
-            //this.comenzarCaer = Date.now();
-        } else if (event.keyCode == 40) {
-            this.pieza.moverAbajo();
+        if (juego.gameOver == false){
+            if (event.keyCode == 37) {
+                this.pieza.moverIzquierda();
+                this.caer();
+                //this.comenzarCaer = Date.now();
+            } else if (event.keyCode == 38) {
+                this.pieza.rotar();
+                this.caer();
+                //this.comenzarCaer = Date.now();
+            } else if (event.keyCode == 39) {
+                this.pieza.moverDerecha();
+                this.caer();
+                //this.comenzarCaer = Date.now();
+            } else if (event.keyCode == 40) {
+                this.pieza.moverAbajo();
+            }
         }
     }
 

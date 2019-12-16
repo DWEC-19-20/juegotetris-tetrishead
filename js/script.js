@@ -1,5 +1,7 @@
 var cvs = document.getElementById("tetris");
-var juego = new Juego(cvs);
+const cvsNext = document.getElementById("piezaSiguiente");
+var juego = new Juego(cvs, cvsNext);
+
 
 let bol = 0;
 var dificultad = document.getElementById("dificultad");
@@ -25,9 +27,6 @@ dificultad.addEventListener('click', function () {
         dificultad.style.color = "black";
     }
 });
-document.addEventListener("keydown", juego.control);
-juego.tablero.dibujarCasilla(0, 0, "white");
-juego.tablero.dibujarTablero();
 
 let bol1 = 0;
 document.getElementById("start").addEventListener('click', function () {
@@ -35,6 +34,10 @@ document.getElementById("start").addEventListener('click', function () {
         location.reload();
     document.getElementById("start").style.backgroundColor = "rgb(172, 16, 16)";
     document.getElementById("start").style.color = "white";
+    document.addEventListener("keydown", juego.control);
+    juego.tablero.dibujarCasilla(0, 0, "white");
+    juego.tablero.dibujarTablero();
+    juego._pSig.dibujar();
     juego.caer();
     document.getElementById("demo").play();
     bol1 = 1;

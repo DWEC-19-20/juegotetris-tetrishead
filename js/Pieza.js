@@ -56,6 +56,21 @@ class Pieza {
       }
     }
 
+    cambioPieza = () => {
+        
+        juego._pieza = juego._pSig;
+        juego._pieza.tablero = juego.tablero;
+        juego._pieza.x = 3;
+        juego._pieza.y = -2;
+        juego._pSig = juego.piezaAleatoria();
+        juego._pSig.tablero = juego.miniTablero;
+        juego._pSig.x = 1;
+        juego._pSig.y = 1;
+        juego.miniTablero.dibujarTablero();
+        juego._pSig.dibujar();
+
+    }
+
     // rellena el tetromino de la pieza con su color en el canvas
     rellenar = (color) => {
         for(var f=0; f<this.activeTetromino.length; f++){
@@ -111,12 +126,12 @@ class Pieza {
             
         }
     }
-
+/*
     previsualizar = () => {
         juego.pieza = juego.piezaAleatoria();
         
     }
-
+*/
     // fijar pieza cuando choca con el suelo u otra pieza
     // hay que comprobar si se ha formado una o varias lineas para borrarlas 
     fijar = () => {
@@ -136,7 +151,7 @@ class Pieza {
         }
 
         this.tablero.eliminarFilasCompletas();
-        juego.pieza = juego.piezaAleatoria();
+        this.cambioPieza();
  
     }
 

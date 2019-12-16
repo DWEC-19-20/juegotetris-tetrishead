@@ -20,6 +20,20 @@ class Tablero {
         }
     }
 
+    dibujarTableroVacio = () => {
+
+        for (let r = 0; r < this.Filas; r++) {
+
+            for (let c = 0; c < this.Columnas; c++) {
+
+                this.tablero[r][c] = HUECO;
+
+            }
+
+        }
+
+    }
+
     // Dibuja un en el canvas del color recibido
     dibujarCasilla = (x, y, color) => {
         this.ctx.fillStyle = color;
