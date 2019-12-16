@@ -61,7 +61,7 @@ creación de más piezas.
 
 ## Reparar ⚠️🔧
 
-- ❗️ Mostrar en un segundo canvas la siguiente pieza.
+- ✔️ Mostrar en un segundo canvas la siguiente pieza.
 - ✔️ Hacerlo responsive para quitar el scroll
 - ❗️ Aumentar la velocidad a medida que aumenta la puntuacion.
 - ❗️ Visualizar animacion de combos.
